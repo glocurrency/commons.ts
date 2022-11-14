@@ -1,5 +1,5 @@
 {
-  "name": "commons.ts",
+  "name": "root",
   "private": true,
   "workspaces": [
     "packages/*"
