@@ -1,11 +1,54 @@
 {
   "name": "root",
-  "type": "module",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
-  "devDependencies": {
-    "lerna": "^6.0.3"
+  "type": "module",
+  "packageManager": "pnpm@9.3.0",
+  "engines": {
+    "node": ">=20.x",
+    "pnpm": ">=9.x"
+  },
+  "dependencies": {
+    "@biomejs/biome": "1.8.1",
+    "@changesets/changelog-github": "0.5.0",
+    "@changesets/cli": "2.27.5",
+    "@commitlint/cli": "19.3.0",
+    "@commitlint/config-conventional": "19.2.2",
+    "@eslint/eslintrc": "3.1.0",
+    "@types/jest": "29.5.12",
+    "@types/node": "20.14.2",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "4.3.1",
+    "@vitest/coverage-istanbul": "1.6.0",
+    "typescript": "5.4.5",
+    "vite": "5.2.13",
+    "vitest": "1.6.0",
+    "vitest-localstorage-mock": "0.1.2"
+  },
+  "scripts": {
+    "build": "pnpm recursive run build",
+    "commit": "npx git-cz -a",
+    "fmt": "biome format --write .",
+    "test": "pnpm recursive run test:unit",
+    "test:coverage": "pnpm run test --coverage",
+    "test:types": "tstyche",
+    "release": "pnpm build && pnpm changeset publish"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "18",
+        "react-dom": "18",
+        "@types/react": "18"
+      }
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }

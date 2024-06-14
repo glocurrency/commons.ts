@@ -2,18 +2,15 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/typescript-node
 {
   "name": "commons.ts",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
-  "workspaceFolder": "/workspace",
+  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:0-20",
   "customizations": {
     "vscode": {
-      "extensions": [
-        "dbaeumer.vscode-eslint",
-        "EditorConfig.EditorConfig",
-        "GitHub.copilot"
-      ]
+      "extensions": ["dbaeumer.vscode-eslint", "EditorConfig.EditorConfig"]
     }
   },
-  "remoteUser": "node",
-  "postCreateCommand": "sudo chown node node_modules"
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/pnpm:2": {
+      "version": "9.3.0"
+    }
+  }
 }

@@ -5,15 +5,24 @@
 
 common.ts is a set of NPM packages used at GloCurrency 
 
-## Local development
+## Development
 
-### Requirements
+### Local
+
+```bash
+$ pnpm install
+$ # ... do your changes ...
+$ pnpm run fmt
+$ pnpm run test
+```
+
+### Devcontainer
 
 1. [Visual Studio Code](https://code.visualstudio.com/)
 1. [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 1. [Docker](https://www.docker.com/products/docker-desktop/)
 
-### Container Setup
+#### Container Setup
 
 Run the command from the command palette `Dev Containers: Reopen in Container` to open the project in a container.
 
