@@ -16,6 +16,14 @@ $ pnpm run fmt
 $ pnpm run test
 ```
 
+#### Unit Test
+
+```bash
+$ pnpm run test # will run all tests
+$ pnpm run test:watch # will watch tests and only rerun the one who are modified
+$ pnpm run test:coverage # will generate a coverage report
+```
+
 ### Devcontainer
 
 1. [Visual Studio Code](https://code.visualstudio.com/)
