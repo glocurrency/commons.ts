@@ -43,4 +43,4 @@ jobs:
           CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_TOKEN }}
         with:
           coverageCommand: pnpm run test:coverage
-          coverageLocations: ./coverage/clover.xml:clover
+          coverageLocations: packages/**/coverage/cobertura-coverage.xml:cobertura
