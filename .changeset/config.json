@@ -3,7 +3,7 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo": "scaleway/scaleway-lib"
+      "repo": "glocurrency/commons.ts"
     }
   ],
   "commit": false,
