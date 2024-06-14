@@ -1,6 +1,7 @@
 {
   "name": "@glocurrency/storage",
   "description": "A small utility to use storage",
+  "version": "0.0.0",
   "type": "module",
   "engines": {
     "node": ">=20.x"
