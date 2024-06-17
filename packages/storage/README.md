@@ -1,6 +1,6 @@
 # `@glocurrency/storage`
 
-A tiny utility to use named regex
+Tiny utilities to make use of local storage
 
 ---
 
