@@ -25,7 +25,7 @@ export type RequestParams<TForm> = Partial<
 
 type setDataByKeyValuePair<TForm> = <K extends keyof TForm>(
   key: K,
-  value: TForm[K]
+  value: TForm[K],
 ) => void
 
 export interface UseFormProps<TForm extends Record<string, any>> {

@@ -1,7 +1,7 @@
 export function objectToFormData(
   source: Record<string, any>,
   form: FormData = new FormData(),
-  parentKey: string | null = null
+  parentKey: string | null = null,
 ): FormData {
   source = source || {}
 
@@ -20,8 +20,8 @@ function composeKey(parent: string | null, key: string): string {
 
 function append(form: FormData, key: string, value: any): void {
   if (Array.isArray(value)) {
-    return Array.from(value.keys()).forEach((index) =>
-      append(form, composeKey(key, index.toString()), value[index])
+    return Array.from(value.keys()).forEach(index =>
+      append(form, composeKey(key, index.toString()), value[index]),
     )
   } else if (value instanceof Date) {
     return form.append(key, value.toISOString())

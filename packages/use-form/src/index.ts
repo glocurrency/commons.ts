@@ -8,12 +8,12 @@ import { objectToFormData } from './formData'
 import { getCloudflareAuthCookie } from './cookies'
 
 export function useForm<TForm extends Record<string, any>>(
-  initialValues?: TForm
+  initialValues?: TForm,
 ): UseFormProps<TForm> {
   const router = useRouter()
 
   const [defaults, setDefaults] = useState<TForm>(
-    initialValues || ({} as TForm)
+    initialValues || ({} as TForm),
   )
   const [data, setData] = useState<TForm>(defaults)
   const [errors, setErrors] = useState({} as Record<keyof TForm, string>)
@@ -28,7 +28,7 @@ export function useForm<TForm extends Record<string, any>>(
     (
       method: Method = Method.GET,
       url: string,
-      params: RequestParams<TForm> = {}
+      params: RequestParams<TForm> = {},
     ) => {
       const _options = {
         ...params,
@@ -110,7 +110,7 @@ export function useForm<TForm extends Record<string, any>>(
         params: method === Method.GET ? data : {},
         headers: headers,
       })
-        .then((response) => {
+        .then(response => {
           if (response.status === 401) {
             router.reload()
           } else {
@@ -137,7 +137,7 @@ export function useForm<TForm extends Record<string, any>>(
 
           return _options.onSuccess(response.data)
         })
-        .catch((error) => {
+        .catch(error => {
           if (error.response) {
             if (error.response.status === 401) {
               router.reload()
@@ -169,18 +169,18 @@ export function useForm<TForm extends Record<string, any>>(
         .then(() => {
           _options.onFinish()
         })
-        .catch((error) => {
+        .catch(error => {
           _options.onFinish()
           return Promise.reject(error)
         })
     },
-    [data, transform, router]
+    [data, transform, router],
   )
 
   return {
     data,
     setData(key, value) {
-      setData((data) => ({ ...data, [key]: value }))
+      setData(data => ({ ...data, [key]: value }))
     },
     isDirty: !isEqual(data, defaults),
     errors,
