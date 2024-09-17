@@ -93,6 +93,8 @@ importers:
         specifier: 0.1.2
         version: 0.1.2(vitest@1.6.0(@types/node@20.14.2)(jsdom@25.0.0))
 
+  packages/money: {}
+
   packages/storage: {}
 
   packages/time: {}
@@ -189,13 +191,16 @@ importers:
   packages/use-get:
     dependencies:
       axios:
-        specifier: ^1.7.7
+        specifier: '>=1.7'
         version: 1.7.7
       js-cookie:
-        specifier: ^3.0.5
+        specifier: '>=3.0'
         version: 3.0.5
+      react:
+        specifier: '>=18.0'
+        version: 18.3.1
       swr:
-        specifier: ^2.2.5
+        specifier: '>=2.2'
         version: 2.2.5(react@18.3.1)
     devDependencies:
       '@testing-library/jest-dom':
@@ -207,9 +212,6 @@ importers:
       '@types/js-cookie':
         specifier: ^3.0.6
         version: 3.0.6
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
 
 packages:
 
