@@ -1,6 +1,6 @@
 import { Spinner, LegacyStack, Card } from '@shopify/polaris'
 
-const LoadingCard = () => {
+export const LoadingCard = () => {
   return (
     <Card>
       <LegacyStack distribution="center">
@@ -11,5 +11,3 @@ const LoadingCard = () => {
     </Card>
   )
 }
-
-export default LoadingCard

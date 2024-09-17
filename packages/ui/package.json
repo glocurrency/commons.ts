@@ -1,7 +1,7 @@
 {
   "name": "@glocurrency/ui",
   "description": "React components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "engines": {
     "node": ">=20.x"
@@ -46,15 +46,15 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/glocurrency/commons.ts",
-    "directory": "packages/storage"
+    "directory": "packages/ui"
   },
   "license": "MIT",
   "dependencies": {
     "@emotion/styled": "^11.13.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@glocurrency/time": "^0.0.0",
-    "@glocurrency/use-get": "^0.0.0",
+    "@glocurrency/time": "^0.0.2",
+    "@glocurrency/use-get": "^0.0.1",
     "@shopify/polaris": "^13.9.0",
     "query-string": "^9.1.0",
     "react": "^18.3.1",

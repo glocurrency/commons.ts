@@ -148,7 +148,7 @@ const DefaultDesctiption = ({ eventType }: DescriptionProps) => {
   )
 }
 
-const Timeline = ({
+export const Timeline = ({
   app,
   targetType,
   targetId,
@@ -269,5 +269,3 @@ const Timeline = ({
     </div>
   )
 }
-
-export default Timeline
