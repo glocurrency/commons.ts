@@ -32,12 +32,12 @@ const targets = resolveToEsbuildTarget(
 export const defaultConfig: UserConfig = {
   build: {
     outDir: 'dist',
-    target: [...targets, 'node20'],
+    target: [...targets],
     minify: false,
     lib: {
       name: pkg.name,
       entry: 'src/index.ts',
-      formats: ['es'],
+      formats: ['es', 'cjs'],
       fileName: (format, filename) => {
         if (format === 'es') {
           return `${filename}.js`
@@ -47,9 +47,12 @@ export const defaultConfig: UserConfig = {
       },
     },
     rollupOptions: {
+      preserveSymlinks: true,
       external,
       output: {
+        interop: 'compat',
         preserveModules: true,
+        preserveModulesRoot: './src',
       },
     },
   },
@@ -74,15 +77,24 @@ export const defaultConfig: UserConfig = {
     allowOnly: false,
     css: true,
     logHeapUsage: true,
-    reporters: ['default'],
-    exclude: ['**/__typetests__/**', 'node_modules', '**/dist/**'],
+    reporters: ['default', 'junit'],
+    outputFile: {
+      junit: '.reports/tests.xml',
+    },
+    exclude: [
+      '**/node_modules/**',
+      '**/{dist,build}/**',
+      '**/__stories__/**',
+      '**.stories.*',
+      '**/coverages/**',
+      '**/__stories__/**',
+      '**/.{idea,git,cache,output,temp,reports,jest}/**',
+    ],
     coverage: {
       provider: 'istanbul',
-      reporter: ['json-summary', 'cobertura'],
+      reporter: ['text', 'json', 'cobertura', 'html', 'json-summary'],
       exclude: [
-        '**/__typetests__/**',
         '.reports/**',
-        '.turbo',
         '**/.eslintrc.*',
         '**/*.d.ts',
         'build',
@@ -90,6 +102,7 @@ export const defaultConfig: UserConfig = {
         'node_modules',
         '**/{webpack,vite,vitest,babel}.config.*',
         '**.snap',
+        '**/__stories__/**',
         '**.svg',
       ],
     },

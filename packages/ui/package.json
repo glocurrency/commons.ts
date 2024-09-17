@@ -1,7 +1,7 @@
 {
   "name": "@glocurrency/ui",
   "description": "React components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "engines": {
     "node": ">=20.x"
@@ -57,15 +57,16 @@
     "@glocurrency/use-get": ">=0.0",
     "@shopify/polaris": ">=13.0",
     "@shopify/polaris-icons": ">=9.0",
-    "query-string": ">=9.0",
     "next": ">=14.0",
+    "query-string": ">=9.0",
     "react": ">=18.0",
     "react-dom": ">=18.0",
-    "react-syntax-highlighter": ">=15.0",
     "react-hot-toast": ">=2.0",
+    "react-syntax-highlighter": ">=15.0",
     "react-use-clipboard": ">=1.0"
   },
   "devDependencies": {
+    "@shopify/react-testing": "^6.0.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@types/jest": "29.5.12",

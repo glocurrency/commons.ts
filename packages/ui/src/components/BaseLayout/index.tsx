@@ -6,7 +6,7 @@ import { Toaster } from 'react-hot-toast'
 
 interface LayoutProps {
   children: React.ReactNode
-  navigation?: React.ReactNode
+  navigation: React.ReactNode
 }
 
 export const BaseLayout = ({ children, navigation }: LayoutProps) => {
