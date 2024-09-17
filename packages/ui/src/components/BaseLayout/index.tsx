@@ -9,7 +9,7 @@ interface LayoutProps {
   navigation?: React.ReactNode
 }
 
-export const Layout = ({ children, navigation }: LayoutProps) => {
+export const BaseLayout = ({ children, navigation }: LayoutProps) => {
   const [mobileNavigationActive, setMobileNavigationActive] = useState(false)
 
   const logo = {
