@@ -1,4 +1,4 @@
-import { Option } from "./types"
+import { Option } from './types'
 
 export function getYearOptions(start: number) {
   const end = new Date().getFullYear()
@@ -31,7 +31,7 @@ export const parseAndFormatTime = (time: string): string => {
 
 export const formatDateOnly = (date: Date): string => {
   return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(
-    date.getDate()
+    date.getDate(),
   )}`
 }
 

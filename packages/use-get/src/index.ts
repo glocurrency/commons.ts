@@ -25,14 +25,14 @@ async function axiosFetcher(url: string) {
     .get(url, {
       headers: defaultHeaders(),
     })
-    .then((res) => res.data)
+    .then(res => res.data)
 }
 
 export async function fetchBlob(url: string): Promise<Blob> {
   return fetch(url, {
     method: 'GET',
     headers: defaultHeaders(),
-  }).then((response) => response.blob())
+  }).then(response => response.blob())
 }
 
 export function useGet<T>(url: string) {
