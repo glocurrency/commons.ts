@@ -1,0 +1,55 @@
+{
+  "name": "@glocurrency/use-form",
+  "version": "0.0.1",
+  "description": "A React hook to help manage form data",
+  "engines": {
+    "node": ">=20.x"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "shx rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "type:generate": "tsc --declaration -p tsconfig.build.json",
+    "build": "vite build --config vite.config.ts && pnpm run type:generate",
+    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
+    "lint": "eslint --report-unused-disable-directives --cache --cache-strategy content --ext ts,tsx .",
+    "test:unit": "vitest --run --config vite.config.ts",
+    "test:unit:coverage": "pnpm test:unit --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glocurrency/commons.ts",
+    "directory": "packages/use-form"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "axios": ">=1.7",
+    "lodash.isequal": ">=4.5",
+    "next": ">=14",
+    "react": ">=18.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@types/js-cookie": "^3.0.6",
+    "@types/lodash.isequal": "^4.5.8"
+  },
+  "dependencies": {
+    "js-cookie": "^3.0.5",
+    "react-hot-toast": "^2.4.1"
+  }
+}
