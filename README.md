@@ -3,7 +3,15 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/d8273220fd500d485303/maintainability)](https://codeclimate.com/github/glocurrency/commons.ts/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/d8273220fd500d485303/test_coverage)](https://codeclimate.com/github/glocurrency/commons.ts/test_coverage)
 
-common.ts is a set of NPM packages used at GloCurrency 
+common.ts is a set of NPM packages used at GloCurrency
+
+## Available packages
+
+- [`@glocurrency/storage`](./packages/storage/README.md): Tiny utilities to make use of local storage.
+
+  ![npm](https://img.shields.io/npm/dm/@glocurrency/storage)
+  ![npm bundle size](https://packagephobia.com/badge?p=@glocurrency/storage)
+  ![npm](https://img.shields.io/npm/v/@glocurrency/storage)
 
 ## Development
 
