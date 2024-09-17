@@ -24,17 +24,20 @@ $ pnpm run test:watch # will watch tests and only rerun the one who are modified
 $ pnpm run test:coverage # will generate a coverage report
 ```
 
-### Devcontainer
+### Container Setup
 
-1. [Visual Studio Code](https://code.visualstudio.com/)
+<details>
+
+You will need to install those additional dependencies:
+
 1. [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 1. [Docker](https://www.docker.com/products/docker-desktop/)
 
-#### Container Setup
-
 Run the command from the command palette `Dev Containers: Reopen in Container` to open the project in a container.
 
-![Reopen in Container](https://i.imgur.com/eKiWJn3.png)
+![Reopen in Container](https://shared.storage.glocurrency.com/reopen-in-container.png)
+
+</details>
 
 ## Authors
 - [Ivan Stasiuk](https://github.com/brokeyourbike) | [Twitter](https://twitter.com/brokeyourbike) | [LinkedIn](https://www.linkedin.com/in/brokeyourbike) | [stasi.uk](https://stasi.uk)
