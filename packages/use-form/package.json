@@ -1,6 +1,6 @@
 {
   "name": "@glocurrency/use-form",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A React hook to help manage form data",
   "engines": {
     "node": ">=20.x"
@@ -41,9 +41,9 @@
     "react": ">=18.0",
     "axios": ">=1.7",
     "js-cookie": ">=3.0",
-    "swr": ">=2.2",
-    "lodash.isequal": ">=4.5",
-    "react-hot-toast": "^2.4.1"
+    "swr": ">=2.0",
+    "lodash.isequal": ">=4.0",
+    "react-hot-toast": ">=2.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.5.0",
