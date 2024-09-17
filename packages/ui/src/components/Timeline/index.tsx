@@ -7,7 +7,7 @@ import { parseAndFormatTime } from '@glocurrency/time'
 import { faRobot } from '@fortawesome/free-solid-svg-icons'
 import { useGetEventsFor } from '../../hooks/timeline'
 import { BasicEventData } from '../../types'
-import { HighlightJson, LoadingCard } from '../../components'
+import { HighlightJson, LoadingCard } from '../..'
 
 const HeadingWrapper = styled.div`
   align-items: center;
