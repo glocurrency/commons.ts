@@ -16,7 +16,7 @@ export const EditPage = ({
 }) => {
   const router = useRouter()
   const [_, setCopied] = useClipboard(
-    `${process.env['NEXT_PUBLIC_BASE_PATH']}${router.asPath}`
+    `${process.env['NEXT_PUBLIC_BASE_PATH']}${router.asPath}`,
   )
 
   const actions = useMemo(() => {
