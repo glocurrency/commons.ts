@@ -1,0 +1,23 @@
+{
+  "extends": "@scaleway/tsconfig",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsxImportSource": "@emotion/react",
+    "types": ["vite/client", "@testing-library/jest-dom"],
+    "noEmit": true,
+    "skipLibCheck": true,
+    // Should be removed once we clear all errors
+    "noUncheckedIndexedAccess": false
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".storybook/**/*.ts",
+    ".storybook/**/*.tsx",
+    "global.d.ts",
+    "expect.d.ts",
+    "jest-axe.d.ts"
+  ],
+  "exclude": ["node_modules", "coverage", "dist", "examples"]
+}
