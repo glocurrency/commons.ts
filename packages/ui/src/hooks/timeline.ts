@@ -6,7 +6,7 @@ export function useGetEventsFor(
   app: string,
   targetType: string,
   targetId: string,
-) {
+): ReturnType<typeof useGet<BasicEventData[]>> {
   const query = queryString.stringify({
     targetType,
     targetId,
