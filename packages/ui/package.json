@@ -1,7 +1,7 @@
 {
   "name": "@glocurrency/ui",
   "description": "React components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "engines": {
     "node": ">=20.x"
@@ -49,17 +49,17 @@
     "directory": "packages/ui"
   },
   "license": "MIT",
-  "dependencies": {
-    "@emotion/styled": "^11.13.0",
-    "@fortawesome/free-solid-svg-icons": "^6.6.0",
-    "@fortawesome/react-fontawesome": "^0.2.2",
-    "@glocurrency/time": "^0.0.2",
-    "@glocurrency/use-get": "^0.0.1",
-    "@shopify/polaris": "^13.9.0",
-    "query-string": "^9.1.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-syntax-highlighter": "^15.5.0"
+  "peerDependencies": {
+    "@emotion/styled": ">=11.0",
+    "@fortawesome/free-solid-svg-icons": ">=6.6",
+    "@fortawesome/react-fontawesome": ">=0.2",
+    "@glocurrency/time": ">=0.0",
+    "@glocurrency/use-get": ">=0.0",
+    "@shopify/polaris": ">=13.0",
+    "query-string": ">=9.0",
+    "react": ">=18.0",
+    "react-dom": ">=18.0",
+    "react-syntax-highlighter": ">=15.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.5.0",
