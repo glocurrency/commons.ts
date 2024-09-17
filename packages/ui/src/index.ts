@@ -1,6 +1,2 @@
-export { HighlightJson } from './components/HighlightJson'
-export { LoadingCard } from './components/LoadingCard'
-export { Timeline } from './components/Timeline'
-export { EditPage } from './components/EditPage'
-export { PageSkeleton } from './components/PageSkeleton'
-export { BaseLayout } from './components/BaseLayout'
+// eslint-disable-next-line no-restricted-syntax
+export * from './components'
