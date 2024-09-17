@@ -12,7 +12,7 @@ export const formatAmount = (currency: string, amount: number): string => {
 
 export const formatAmountWithZeroes = (
   currency: string,
-  amount: number
+  amount: number,
 ): string => {
   return amount.toLocaleString('en-UK', {
     style: 'currency',
