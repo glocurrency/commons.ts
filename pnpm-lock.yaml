@@ -69,8 +69,8 @@ importers:
         specifier: 4.23.1
         version: 4.23.1
       esbuild-plugin-browserslist:
-        specifier: 0.12.1
-        version: 0.12.1(browserslist@4.23.1)(esbuild@0.20.2)
+        specifier: 0.14.0
+        version: 0.14.0(browserslist@4.23.1)(esbuild@0.20.2)
       read-pkg:
         specifier: 9.0.1
         version: 9.0.1
@@ -111,6 +111,9 @@ importers:
       '@glocurrency/time':
         specifier: ^0.0.0
         version: 0.0.0
+      '@glocurrency/use-get':
+        specifier: ^0.0.0
+        version: 0.0.0(react@18.3.1)
       '@shopify/polaris':
         specifier: ^13.9.0
         version: 13.9.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1261,6 +1264,12 @@ packages:
     resolution: {integrity: sha512-OeHRRhPwLF5wkKLj3OyBtwvtyQ+hhHOECZQkhZ0Abh9Lo4nbj2BxLFx1dT09io2kzzqdbqg1uLjv3VF/mEWgcg==}
     engines: {node: '>=20.x'}
 
+  '@glocurrency/use-get@0.0.0':
+    resolution: {integrity: sha512-lKhX5Lu5O4h4F8l3BmwGR0D/J5kajuzx8qLflVGtP5B1l4BnvnfFQDdrO8WMJLYn6M7mbck1/iArehWudsP1ww==}
+    engines: {node: '>=20.x'}
+    peerDependencies:
+      react: '>=18.0'
+
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
     engines: {node: '>=12.22'}
@@ -2011,12 +2020,12 @@ packages:
     resolution: {integrity: sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==}
     engines: {node: '>= 0.4'}
 
-  esbuild-plugin-browserslist@0.12.1:
-    resolution: {integrity: sha512-DtAnJCCFwsM2az26wXh1lisc+pyXIDS3Fr0v5+m4OolALmhtl1AnY/SIZb/QqzNGMQrm7HAgWiO2IwCw9i3JqA==}
+  esbuild-plugin-browserslist@0.14.0:
+    resolution: {integrity: sha512-z/3nq4yIgeRiABXj1pdCz3NvYyAgny070hYjJsML7ag0VogZeE6M0TXg66EloNpzg9rBXOkKQgwHBQ7qz2ZC4g==}
     engines: {node: '>=18'}
     peerDependencies:
       browserslist: ^4.21.8
-      esbuild: ~0.21.4
+      esbuild: ~0.23.0
 
   esbuild@0.20.2:
     resolution: {integrity: sha512-WdOOppmUNU+IbZ0PaDiTst80zjnrOkyJNHoKupIcVyU8Lvla3Ugx94VzkQ32Ijqd7UhHJy75gNWDMUekcrSJ6g==}
@@ -5052,6 +5061,15 @@ snapshots:
 
   '@glocurrency/time@0.0.0': {}
 
+  '@glocurrency/use-get@0.0.0(react@18.3.1)':
+    dependencies:
+      axios: 1.7.7
+      js-cookie: 3.0.5
+      react: 18.3.1
+      swr: 2.2.5(react@18.3.1)
+    transitivePeerDependencies:
+      - debug
+
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.3.0': {}
@@ -5890,7 +5908,7 @@ snapshots:
       is-date-object: 1.0.5
       is-symbol: 1.0.4
 
-  esbuild-plugin-browserslist@0.12.1(browserslist@4.23.1)(esbuild@0.20.2):
+  esbuild-plugin-browserslist@0.14.0(browserslist@4.23.1)(esbuild@0.20.2):
     dependencies:
       browserslist: 4.23.1
       debug: 4.3.5
