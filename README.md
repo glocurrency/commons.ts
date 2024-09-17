@@ -55,7 +55,7 @@ $ pnpm run fmt
 $ pnpm run test
 ```
 
-#### Unit Test
+### Unit Test
 
 ```bash
 $ pnpm run test # will run all tests
