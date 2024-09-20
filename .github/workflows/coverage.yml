@@ -17,7 +17,6 @@ jobs:
           check-latest: true
           cache: 'pnpm'
       - run: pnpm install
-      - run: pnpm run build
 
       - uses: paambaati/codeclimate-action@v5
         continue-on-error: true
