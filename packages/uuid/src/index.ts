@@ -3,5 +3,5 @@ export const first8 = (value: string): string => {
 }
 
 export const slim = (value: string): string => {
-  return value.replace(/-/g, '');
+  return value.replace(/-/g, '')
 }

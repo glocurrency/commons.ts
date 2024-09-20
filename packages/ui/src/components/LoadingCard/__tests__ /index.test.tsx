@@ -1,4 +1,5 @@
 import { mount } from '@shopify/react-testing'
+import { Card } from '@shopify/polaris'
 import { describe, test } from 'vitest'
 import { LoadingCard } from '..'
 
@@ -9,6 +10,6 @@ describe('LoadingCard', () => {
   })
   test('renders correctly ', () => {
     const wrapper = mount(<LoadingCard />)
-    expect(wrapper.props.count).toBeUndefined()
+    expect(wrapper).toContainReactComponent(Card)
   })
 })
