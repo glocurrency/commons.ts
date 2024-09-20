@@ -29,4 +29,4 @@ jobs:
           check-latest: true
           cache: 'pnpm'
       - run: pnpm install
-      - run: pnpm run test:unit
+      - run: pnpm run test
