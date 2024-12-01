@@ -4,7 +4,9 @@
     "noEmit": false,
     "emitDeclarationOnly": true,
     "rootDir": "src",
-    "outDir": "dist"
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true
   },
   "exclude": [
     "*.config.ts",
