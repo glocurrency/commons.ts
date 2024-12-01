@@ -4,11 +4,12 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "target": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "types": ["vite/client", "@testing-library/jest-dom"],
     "noEmit": true,
+    "jsx": "preserve",
     "skipLibCheck": true,
-    // Should be removed once we clear all errors
-    "noUncheckedIndexedAccess": false
   },
   "include": [
     "**/*.ts",

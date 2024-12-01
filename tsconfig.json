@@ -5,8 +5,8 @@
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "noEmit": true,
-    "allowJs": true,
     "jsx": "preserve",
     "skipLibCheck": true
   },
