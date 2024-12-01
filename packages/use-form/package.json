@@ -1,6 +1,6 @@
 {
   "name": "@glocurrency/use-form",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A React hook to help manage form data",
   "engines": {
     "node": ">=20.x"
