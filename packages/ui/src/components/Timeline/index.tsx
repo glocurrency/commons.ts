@@ -173,11 +173,8 @@ export const Timeline = ({
     for (const t of items) {
       const day = new Date(t.timestamp).toUTCString().substring(0, 16)
 
-      if (!(day in result)) {
-        result[day] = []
-      }
-
-      result[day].push(t)
+      result[day] = result[day] || [];
+      result[day]!.push(t);
     }
 
     return result
@@ -223,7 +220,7 @@ export const Timeline = ({
                         flexDirection: 'column',
                       }}
                     >
-                      {prepared[day].map((t: BasicEventData) => (
+                      {prepared[day]?.map((t: BasicEventData) => (
                         <div
                           key={t.actorId}
                           style={{
