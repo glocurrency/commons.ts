@@ -1,5 +1,5 @@
 import { useMemo, type ReactNode } from 'react'
-import { useRouter } from 'next/router.js'
+import { useRouter } from 'next/router'
 import { MenuActionDescriptor, Page } from '@shopify/polaris'
 import { ShareIcon } from '@shopify/polaris-icons'
 import useClipboard from 'react-use-clipboard'
