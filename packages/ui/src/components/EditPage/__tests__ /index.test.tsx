@@ -3,7 +3,7 @@ import { AppProvider, Page } from '@shopify/polaris'
 import { describe, test, vi } from 'vitest'
 import { EditPage } from '..'
 
-vi.mock('next/router', () => require('next-router-mock'))
+vi.mock('next/router.js', () => require('next-router-mock'))
 
 describe('EditPage', () => {
   test('renders correctly ', () => {
