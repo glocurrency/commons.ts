@@ -1,5 +1,6 @@
 import react from '@vitejs/plugin-react'
 import browserslist from 'browserslist'
+import dynamicImport from 'vite-plugin-dynamic-import';
 import { resolveToEsbuildTarget } from 'esbuild-plugin-browserslist'
 import { readPackage } from 'read-pkg'
 import { type UserConfig, defineConfig } from 'vitest/config'
@@ -60,6 +61,7 @@ export const defaultConfig: UserConfig = {
     react({
       jsxRuntime: 'automatic',
     }),
+    dynamicImport(),
   ],
   test: {
     name: 'lib',
