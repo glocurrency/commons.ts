@@ -1,8 +1,9 @@
 {
   "extends": "@scaleway/tsconfig",
   "compilerOptions": {
-    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
+    "target": "esnext",
     "types": ["vite/client", "@testing-library/jest-dom"],
     "noEmit": true,
     "skipLibCheck": true,
