@@ -57,6 +57,12 @@
         "react-dom": "18",
         "@types/react": "18"
       }
+    },
+    "overrides": {
+      "micromatch@<4.0.8": ">=4.0.8",
+      "rollup@>=4.0.0 <4.22.4": ">=4.22.4",
+      "cross-spawn@<6.0.6": ">=6.0.6",
+      "cross-spawn@>=7.0.0 <7.0.5": ">=7.0.5"
     }
   },
   "commitlint": {
