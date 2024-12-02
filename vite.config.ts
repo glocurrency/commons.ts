@@ -38,7 +38,7 @@ export const defaultConfig: UserConfig = {
     lib: {
       name: pkg.name,
       entry: 'src/index.ts',
-      formats: ['es', 'cjs'],
+      formats: ['cjs'], // 'es' removed
       fileName: (format, filename) => {
         if (format === 'es') {
           return `${filename}.js`
